@@ -40,7 +40,12 @@
 
            	打印实例： Log.map(map)
 
-
+>01-29 11:57:07.955 32334-32334/com.shopin.android.shopinsdk D/Shopin_Log-SAVE_SDCARD: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+01-29 11:57:07.955 32334-32334/com.shopin.android.shopinsdk D/Shopin_Log-SAVE_SDCARD: │ LogTestActivity.loggerTest  (LogTestActivity.java:101)
+01-29 11:57:07.955 32334-32334/com.shopin.android.shopinsdk D/Shopin_Log-SAVE_SDCARD: │    Log.map  (Log.java:192)
+01-29 11:57:07.955 32334-32334/com.shopin.android.shopinsdk D/Shopin_Log-SAVE_SDCARD: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+01-29 11:57:07.955 32334-32334/com.shopin.android.shopinsdk D/Shopin_Log-SAVE_SDCARD: │ {weather=听说有雪哦, name=今天周一99}
+01-29 11:57:07.955 32334-32334/com.shopin.android.shopinsdk D/Shopin_Log-SAVE_SDCARD: 
 ### 二、日志管理
 
         1）上传日志
