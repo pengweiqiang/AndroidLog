@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        //是否打印日志配置
+        buildConfigField "boolean", "IS_PRINT_LOG", String.valueOf(rootProject.ext.isPrintLog)
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //打成jar包任务
+    task makeJar(type: Copy) {
+        delete 'build/libs/mylibrary.jar' //删除已经存在的jar包
+        from('build/intermediates/bundles/release/')//从该目录下加载要打包的文件
+        into('build/libs/')//jar包的保存目录
+        include('classes.jar')//设置过滤，只打包classes文件
+        rename('classes.jar', 'log.jar')//重命名，mylibrary.jar 根据自己的需求设置
+    }
+    makeJar.dependsOn(build)
+}
+
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile group: 'commons-net', name: 'commons-net', version: '3.6'
+    compile 'com.orhanobut:logger:2.1.1'
+}
+apply from: './nexus-push.gradle'
