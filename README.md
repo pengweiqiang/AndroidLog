@@ -4,14 +4,12 @@
 
 >* 快速定位代码，点击日志直接跳入到代码。
 >* 支持各种对象打印，并格式化输出。json、xml、map
->* 保存指定日志在SDCard，并可配置的上传到指定服务器
-
-### 一、引用Library
-    主module的build.gradle引用 compile 'com.shopin.android:log:1.0.+’
+>* 保存指定日志在SDCard，并可配置的FTP上传到指定服务器
 
 
 
-### 二、Log使用
+
+### 一、Log使用
 
     1）日志库初始化
         在Application启动的时候进行初始化。优化冷启动速度，可以进行异步初始化。采用IntentService进行优化。
@@ -43,7 +41,7 @@
            	打印实例： Log.map(map)
 
 
-### 三、日志管理
+### 二、日志管理
 
         1）上传日志
                 集成Log库，有默认的上传日志界面。当然可以自定义界面，采用 2）中的Api。
@@ -81,9 +79,9 @@
                 IP地址：172.16.200.4
                 端口号：21
                 用户名：ftptest
-                密码：$ftptest1001
-
-![](screenshot/aa.png)
+                密码：$ftptest1001
+### 三、上传页面模板
+![](screenshot/aa.png =300x600)
 
 
 ### 四、参考项目
