@@ -81,7 +81,7 @@
                 用户名：ftptest
                 密码：$ftptest1001
 ### 三、上传页面模板
-![](screenshot/aa.png =300x600)
+![](screenshot/aa.png)
 
 
 ### 四、参考项目
