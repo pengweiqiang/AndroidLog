@@ -71,14 +71,8 @@
                 8）上传所有日志：LoggerManager.uploadAllLogs(String deviceNumber,UploadProgressListener);
 
         3）日志服务器配置：
-           
+           日志服务器可自行配置,通过FtpConfig进行设置
 
-            日志上传默认是在 172.16.200.4服务器上：日志服务器可自行配置,通过FtpConfig进行设置
-
-                IP地址：172.16.200.4
-                端口号：21
-                用户名：ftptest
-                密码：$ftptest1001
                 
 ### 三、上传页面模板
 ![](screenshot/aa.png)
