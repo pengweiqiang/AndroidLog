@@ -37,8 +37,7 @@
         			* str：字符串
         			* isSaveSDCard：（可选）针对这条打印信息是否保存在SDCard中。
                 类似Api还有e；d；i；w；v；wtf；Log.e(Throwable)。具体Api可以参考
-
-           	打印实例： Log.map(map)
+            打印实例： Log.map(map)
 
 
 ### 二、日志管理
@@ -80,6 +79,7 @@
                 端口号：21
                 用户名：ftptest
                 密码：$ftptest1001
+                
 ### 三、上传页面模板
 ![](screenshot/aa.png)
 
